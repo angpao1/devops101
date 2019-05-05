@@ -23,7 +23,24 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
+<distributionManagement>
+        <repository>
+            <id>release</id>
+            <name>releases</name>
+            <url>http://192.168.43.165:8081/artifactory/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshot</id>
+            <name>snapshots</name>
+            <url>http://192.168.43.165:8081/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
 
+    <scm>
+        <connection>scm:git:git@github.com:angpao1/devops101.git</connection>
+        <developerConnection>scm:git:git@github.com:angpao1/devops101.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
